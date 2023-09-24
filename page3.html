@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
     <head>
         <title>Pet Adoption</title>
@@ -22,15 +23,38 @@
                     <fieldset>
                         <label>Your Full Name</label><br>
                         <input type="text" name+="full_name"><br>
-                        <label>Your Email Address</label><br>
-                        <input type="email" name+="email"><br>
-                        <label>Your Phone Number</label><br>
-                        <input type="text" name+="phone"><br>
                         <br>
+                        <lable>Select your gender:</Select></lable><br>
+                        <br>
+                        <input type="radio" name="Male" value="male">Male
+                        <input type="radio" name="Female" value="female">Female<br>
+                        </select>
+                        <br>
+                        <!--
                         <lable>How should we contact you?</lable><br>
                         <input type="radio" name="email" value="male">Email<br>
                         <input type="radio" name="phone" value="female">Phone<br>
+                        </select>
+                        -->
+                        <label for="contactMethod">How should we contact you?</label><br>
+                        <select id="contactMethod" name="contact_method">
+                            <option value="none">Select One</option>
+                            <option value="email">Email</option>
+                            <option value="phone">Phone</option>
                         </select><br>
+                        <div id="emailInput" class="hidden">
+                            <label>Enter your email</label><br>
+                            <input type="email" name="entered_email"><br>
+                        </div>
+                        <div id="phoneInput" class="hidden">
+                            <label>Enter your phone</label><br>
+                            <input type="text" name="entered_phone"><br>
+                        </div>
+                        <br>
+                        <div id="emailInput" style="display: none;">
+                            <label for="email">Enter your email:</label><br>
+                            <input type="email" id="email" name="email"><br>
+                        </div>
                         <label>How did you hear about us:</label><br>
                         <textarea rows="5" columns="40"></textarea><br>
                         <input type="submit" value="Submit"></input><br>
@@ -40,6 +64,8 @@
         <!-- Footer -->
             <footer>&copy;Copyright 2023</footer>
         </div>
+
+        <script src="javascript/contactDropdown.js"></script>
         <!-- End Container -->
     </body>
 </html>
